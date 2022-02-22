@@ -1,0 +1,8 @@
+{
+    "name": "nimanyi/phpcrypto",
+    "description": "cryptojs for php",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
