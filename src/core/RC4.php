@@ -11,10 +11,7 @@ class RC4
      */
     static function encrypt($str, $key)
     {
-        $s = array();
-        for ($i = 0; $i < 256; $i++) {
-            $s[$i] = $i;
-        }
+        $s = range(0, 255);
         $j = 0;
         for ($i = 0; $i < 256; $i++) {
             $j     = ($j + $s[$i] + ord($key[$i % strlen($key)])) % 256;

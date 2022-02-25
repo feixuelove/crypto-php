@@ -10,10 +10,10 @@ $data = "中文123@！#（）`_~|";
 $key  = md5("123");
 $iv   = substr($key, 0, 16);
 
-$encrypt_str = AES::opensslEncrypt($data, $key, $iv);
+$ciphertext = AES::opensslEncrypt($data, $key, $iv);
 
-echo "encrypt_str:" . $encrypt_str . PHP_EOL;
+echo "encrypt:" . $ciphertext . PHP_EOL;
 
-$decrypt_str = AES::opensslDecrypt($encrypt_str, $key, $iv);
+$plaintext = AES::opensslDecrypt($ciphertext, $key, $iv);
 
-echo "decrypt_str:" . $decrypt_str . PHP_EOL;
+echo "decrypt:" . $plaintext . PHP_EOL;
